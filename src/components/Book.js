@@ -1,9 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Vr from './Vr';
+import { removedBook } from '../redux/books/books';
 
 function Book(props) {
-  const { title, author } = props;
+  const { title, author, id } = props;
+  const dispatch = useDispatch();
   return (
     <div className="book">
       <div>
@@ -15,7 +18,7 @@ function Book(props) {
             Comment
           </button>
           <Vr />
-          <button type="submit">
+          <button type="submit" onClick={() => dispatch(removedBook(id))}>
             Remove
           </button>
           <Vr />
@@ -31,6 +34,7 @@ function Book(props) {
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Book;
