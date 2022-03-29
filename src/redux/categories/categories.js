@@ -1,5 +1,5 @@
 // Actions
-const STATUS_ASKED = 'STATUS_ASKED';
+const STATUS_ASKED = 'bookstore/categories/STATUS_ASKED';
 
 // Reducer
 export default function reducer(state = [], action) {

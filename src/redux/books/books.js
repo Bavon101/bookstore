@@ -1,6 +1,6 @@
 // Actions
-const ADDED = 'ADDED';
-const REMOVED = 'REMOVED';
+const ADDED = 'bookstore/books/ADDED';
+const REMOVED = 'bookstore/books/REMOVED';
 
 // Reducer
 export default function reducer(state = [], action) {
