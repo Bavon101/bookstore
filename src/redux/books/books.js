@@ -3,7 +3,7 @@ const ADDED = 'bookstore/books/ADDED';
 const REMOVED = 'bookstore/books/REMOVED';
 
 // Reducer
-export default function reducer(state = [], action) {
+export default function bookReducer(state = [], action) {
   switch (action.type) {
     case ADDED:
       return [
@@ -11,7 +11,7 @@ export default function reducer(state = [], action) {
         action.book,
       ];
     case REMOVED:
-      return state.filter((book) => book.id !== action.id);
+      return [...state.filter((book) => book.id !== action.id)];
     default:
       return state;
   }
