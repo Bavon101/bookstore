@@ -20,12 +20,20 @@ export default function Books() {
         {
           booksList.books.length > 0
             ? booksList.books.map(
-              (book) => <Book key={book.id} title={book.title} author={book.author} id={book.id} />,
+              (book) => (
+                <Book
+                  key={book.id}
+                  title={book.title}
+                  author={book.author}
+                  id={book.id}
+                  category={book.category}
+                />
+              ),
             )
             : <h3> There are no available titles, please add one</h3>
       }
       </div>
-      <hr />
+      <div className="line" />
       <BookForm />
     </div>
   );

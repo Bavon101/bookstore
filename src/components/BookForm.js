@@ -11,7 +11,7 @@ export default function BookForm() {
   const url = `${baseUrl}/apps/${app}/books`;
   return (
     <div className="book-form">
-      <h2>
+      <h2 className="newTitle">
         ADD NEW BOOK
       </h2>
       <form
@@ -23,7 +23,7 @@ export default function BookForm() {
               title,
               author,
               item_id: new Date().getTime(),
-              category: 'Tests',
+              category: 'Action',
             },
           ));
           e.preventDefault();
