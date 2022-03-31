@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addedBook } from '../redux/books/books';
+import apiConstants from '../api/constants';
+import { addBook } from '../api/data_fetch';
 
 export default function BookForm() {
   const [title, setBookTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
+  const { baseUrl, app } = apiConstants;
+  const url = `${baseUrl}/apps/${app}/books`;
   return (
     <div className="book-form">
       <h2>
@@ -14,11 +17,15 @@ export default function BookForm() {
       <form
         action="submit"
         onSubmit={(e) => {
-          dispatch(addedBook({
-            title,
-            author,
-            id: new Date().getTime(),
-          }));
+          dispatch(addBook(
+            url,
+            {
+              title,
+              author,
+              item_id: new Date().getTime(),
+              category: 'Tests',
+            },
+          ));
           e.preventDefault();
           setBookTitle('');
           setAuthor('');
