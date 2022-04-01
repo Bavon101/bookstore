@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-Coming Soon..
+[Heroku](https://bavon101bookstore.herokuapp.com/)
 
 ## Getting Started
 
