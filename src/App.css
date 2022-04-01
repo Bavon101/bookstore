@@ -1,6 +1,5 @@
 body {
   margin: auto;
-  padding: 0 0 49.625rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fafafa;
@@ -10,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   gap: 50px;
-  height: 5.938rem;
+  height: 10%;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
@@ -48,9 +47,11 @@ h1 {
 h2 {
   font-family: "Roboto Slab", serif;
   letter-spacing: -0.2px;
-  width: 12.313rem;
   height: 1.813rem;
-  margin: 0.188rem 20.188rem 0 0;
+}
+
+.book-info {
+  width: 35%;
 }
 
 .newTitle {
@@ -105,6 +106,10 @@ h5 {
   border: solid 1px #e8e8e8;
   background-color: #fff;
   width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
 }
 
 .book-form {
@@ -116,6 +121,38 @@ h5 {
 .book-options {
   display: flex;
   gap: 3px;
+}
+
+.charpter-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chapter {
+  font-family: 'RobotoSlab' ,sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.chapter-btn {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0290ff;
+  height: 2.063rem;
 }
 
 .vr {
@@ -179,6 +216,75 @@ form button,
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+}
+
+.progress-container{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.progress-status{
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-percentage {
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin: 0;
+}
+
+.p-status {
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color:#fafafa;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.progress {
+  border: 5px solid #fafafa;
+  border-top: 5px solid #4386bf;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-self: center;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.loader,
+.mini-loader {
+  border: 5px solid #fafafa;
+  border-top: 5px solid #4386bf;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-self: center;
+  animation: spin 0.5s linear infinite;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mini-loader {
+  width: 10px;
+  height: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
