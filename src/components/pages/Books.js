@@ -4,16 +4,22 @@ import BookForm from '../BookForm';
 import Book from '../Book';
 import apiConstants from '../../api/constants';
 import { fetchBooks } from '../../api/data_fetch';
+import Loading from '../Loading';
 
 export default function Books() {
   const booksList = useSelector((state) => state.bookReducer);
   const dispatch = useDispatch();
+  const { loading, deleting } = booksList;
 
   const { baseUrl, app } = apiConstants;
   const url = `${baseUrl}/apps/${app}/books`;
   useEffect(() => {
     dispatch(fetchBooks(url));
   }, []);
+
+  if (loading) {
+    return (<Loading mini={false} />);
+  }
   return (
     <div>
       <div>
@@ -26,6 +32,7 @@ export default function Books() {
                   title={book.title}
                   author={book.author}
                   id={book.id}
+                  deletingList={deleting}
                   category={book.category}
                 />
               ),
