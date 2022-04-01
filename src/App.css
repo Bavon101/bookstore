@@ -130,7 +130,7 @@ h5 {
 }
 
 .chapter {
-  font-family: 'RobotoSlab' ,sans-serif;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -218,19 +218,19 @@ form button,
   color: #4386bf;
 }
 
-.progress-container{
+.progress-container {
   display: flex;
   gap: 5px;
   align-items: center;
 }
 
-.progress-status{
+.progress-status {
   display: flex;
   flex-direction: column;
 }
 
 .progress-percentage {
-  font-family: Montserrat;
+  font-family: 'Montserrat', serif;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -244,9 +244,9 @@ form button,
 .p-status {
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color:#fafafa;
+  background-color: #fafafa;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', serif;
   font-size: 0.875rem;
   color: #121212;
 }
